@@ -45,6 +45,11 @@ img{
     width: 50%;
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
 }
+img:hover{
+    transform: scale(1.9);
+    transition: .5s;
+    
+}
 @keyframes change {
     0%{
         background-position: 0 50%;

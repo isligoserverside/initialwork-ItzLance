@@ -36,7 +36,13 @@ let personData = {"ednaMode":{ "name": "Edna Mode",
         "movie":"Big Hero Six",
         "imageurl": "/images/baymax.jpg",
         "height": "188cm",
-        "hobbies": ["Medical Assistance", "Hugs", "SuperHero"]}
+        "hobbies": ["Medical Assistance", "Hugs", "SuperHero"]},
+
+"fluffo": {"name": "Fluffo",
+           "dob": "01/01/2019",
+           "imageurl": "/images/fluffo.jpg",
+           "height": "15cm",
+           "hobbies": ["sleeping", "eating","lurking"]}
 };
         
 app.get('/dipper', (req,res) =>
@@ -50,6 +56,10 @@ app.get('/ednaMode', (req,res) =>
 
 app.get('/baymax', (req,res) =>
     res.render('person', {person: personData.baymax}));
+app.get('/', (req,res) => res.render('home'));
+
+app.get('/fluffo', (req,res) =>
+    res.render('person', {person: personData.fluffo}));
 app.get('/', (req,res) => res.render('home'));
 
 app.get('/about', (req,res) => res.render('about'));
