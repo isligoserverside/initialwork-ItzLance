@@ -44,23 +44,15 @@ let personData = {"ednaMode":{ "name": "Edna Mode",
            "height": "15cm",
            "hobbies": ["sleeping", "eating","lurking"]}
 };
-        
-app.get('/dipper', (req,res) =>
-    res.render('person', {person: personData.dipperPines}));
+         
+app.get('/personlist/:name',(req,res)=>{
+    let name = req.params.name;
+    res.render('person',{person: personData[name]});
+});
 
-app.get('/babyYoda', (req,res) =>
-    res.render('person', {person: personData.babyYoda}));
-
-app.get('/ednaMode', (req,res) =>
-    res.render('person', {person: personData.ednaMode}));
-
-app.get('/baymax', (req,res) =>
-    res.render('person', {person: personData.baymax}));
-app.get('/', (req,res) => res.render('home'));
-
-app.get('/fluffo', (req,res) =>
-    res.render('person', {person: personData.fluffo}));
-app.get('/', (req,res) => res.render('home'));
+app.get('/personlist',(req,res)=>{
+res.render('person',{person:personData})
+});
 
 app.get('/about', (req,res) => res.render('about'));
 
