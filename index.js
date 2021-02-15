@@ -44,14 +44,19 @@ let personData = {"ednaMode":{ "name": "Edna Mode",
            "height": "15cm",
            "hobbies": ["sleeping", "eating","lurking"]}
 };
+
+app.get('/personlist',(req,res)=>{
+    res.render('personlist',{person:personData})
+    });
          
 app.get('/personlist/:name',(req,res)=>{
     let name = req.params.name;
-    res.render('person',{person: personData[name]});
-});
-
-app.get('/personlist',(req,res)=>{
-res.render('person',{person:personData})
+     if(personData[name]){
+        res.render('person',{person: personData[name]});
+     }else{
+        res.type('text/plain');
+        res.send('Server 404 Error');
+     }
 });
 
 app.get('/about', (req,res) => res.render('about'));

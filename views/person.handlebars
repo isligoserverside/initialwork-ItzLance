@@ -1,4 +1,30 @@
-<h2> All about {{person.name}}</h2>
+
+<div class="container-fluid mb-5 mt-5 bg-dark" id="containStyle">
+   <div class="row no-gutters carousel-bg">
+    <div class="col-md-5 mt-5 mb-5">
+      <img src={{person.imageurl}} class="card-img carousel-img mt-2" alt="kid_with_tiger_plushy">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body " id="cardBdy">
+        <h2 class="card-title text-dark text-center text-white pt-2 pb-2">All about: {{person.name}}</h2>
+         <h3 class="card-text text-center text-white pt-2 pb-2"> Height: {{person.height}}</h3>
+         {{#if person.dob}}
+         <h3 class="card-text text-center text-white pt-2 pb-2">Date of Birth {{person.dob}}</h3>
+          {{/if}}
+          {{#if person.movie}}
+            <h3 class="card-text text-center text-white pt-2 pb-2">Movie: {{person.movie}}</h3>
+             {{/if}}
+              <h2 class="card-text text-center text-white pt-2 pb-2">Hobbies:</h2>
+    <ul  class="nav nav-pills nav-fill">
+    {{#each person.hobbies}}
+    <li class="nav-item list-group-item-secondary mt-3 mb-2 pt-3 pb-3 text-center" id="pill">{{this}}</li>
+    {{/each}}
+       </ul>
+      </div>
+    </div>
+  </div> 
+</div>
+<!--<h2> All about {{person.name}}</h2>
 
 <h3>Name {{person.name}}</h3>
 
@@ -17,3 +43,4 @@
     {{/each}}
 </ul>
 <img src={{person.imageurl}} alt="photo of the person">
+-->

@@ -2,13 +2,27 @@
 <html>
     <head>
         <title>Covid Travel</title>
-       <link href="https://cdn.jsdelivr.net/npm/boot  strap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-       <link rel="stylesheet" href="/css/style.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="/css/style.css"> -->
+      <link rel="stylesheet" href="/css/styleTwo.css">
     </head>
     <body>
         <header>
-           <a href="/"><img src="/images/fluffer.jpg" alt="costa"></a>
+         {{>nav}}
         </header>
+ <!--<a href="/"><img src="/images/fluffer.jpg"  alt="costa"></a> -->
+          <div class="container-fluid mb-5">
+   <div class="row no-gutters carousel-bg">
+    <div class="col-md-5 mt-5 mb-5">
+      <img src="/images/fluffer.jpg" class="card-img carousel-img" alt="kid_with_tiger_plushy">
+    </div>
+    <div class="col-md-12 col-lg-7">
+      <div class="card-body mt-5" id="cardBdy">
          {{{body}}}
+      </div>
+    </div>
+  </div> 
+</div>
+{{>footer}}
     </body>
 </html> 

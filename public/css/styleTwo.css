@@ -1,0 +1,104 @@
+body{
+    background: linear-gradient(-45deg,#ffffff,#f5f5f5,#e3e3e3,#d4d4d4,#c9c9c9,#bababa);
+    background-size: 400%;
+    animation-delay: 0s;
+    animation: change 30s ease-in-out infinite;
+}
+img{
+    border-radius: 50px!important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+nav{
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding-left: 2%;
+    padding-right: 5%;
+    background: linear-gradient(-45deg,#a8a8a8,#b5b5b5,#bfbfbf,#cccccc,#d4d4d4,#e0e0e0,#f0f0f0);
+    background-size: 400%;
+    animation-delay: 0s;
+    animation: change 5s ease-in-out infinite;
+}
+img:hover{
+    transform: rotateY(360deg);
+    transform: scale(0.55);
+    transition: 0.5s;
+    transition-delay:0.2s;
+}
+#containStyle{
+    border-radius: 50px!important;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+#pill{
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 50px;
+}
+#pill:hover{
+    background: linear-gradient(-35deg,#363636,#4f4f4f,#5e5e5e,#707070,#808080,#949292,#a8a8a8);
+    animation-delay: 1s;
+    animation: change 10s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    color: white!important;
+    transition: 0.5s;
+    transition-delay:0.1s;
+    transform: scale(1.2);
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#btnStyle{
+    padding: 3%;
+    max-width: 40%;
+    margin-left: 35%;
+    border-radius: 50px;
+    background-color: #1f1f1f!important;
+}
+#btnStyle:hover{
+    background: linear-gradient(-45deg,#212121,#2e2e2e,#3d3d3d,#4f4e4e,#5e5e5e,#6e6e6e);
+    background-size: 400%;
+    animation-delay: 0s;
+    animation: change 3s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    color: white!important;  
+    animation-delay: 1s;
+    transition: 0.5s;
+    transition-delay:0.1s;
+    transform: scale(1.2);
+}
+footer{
+
+ border-top-left-radius: 50px;
+ border-top-right-radius: 50px;
+ background: linear-gradient(-45deg,#212121,#2e2e2e,#3d3d3d,#4f4e4e,#5e5e5e,#6e6e6e);
+background-size: 400%;
+animation-delay: 0s;
+animation: change 3s ease-in-out infinite;
+}
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%; 
+    }
+    100%{
+        background-position: 0 50%; 
+}
+
+}
+@media(max-width: 992px) {
+    #btnStyle{
+        padding: 3%;
+        max-width: 70%;
+        margin-left: 5%;
+        border-radius: 50px;
+    }
+}
+@media(max-width:768px) {
+    #btnStyle{
+        max-width: 90%;
+    }
+}
