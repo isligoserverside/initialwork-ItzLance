@@ -12,11 +12,26 @@ let personData = {"ednaMode":{ "name": "Edna Mode",
 "height": "60cm",
 "hobbies": ["Telekinesis", "Been Cute", "Macaroons"]},
 
-"dipperPines" : { "name": "Dipper",
+"dipper" : { "name": "Dipper",
 "dob": "01/01/2012",
 "movie": "Gravity Falls",
 "imageurl": "/images/dipper.png",
 "height": "152cm",
-"hobbies": ["Exploring", "Mysteries", "Sleeping"]}};
+"hobbies": ["Exploring", "Mysteries", "Sleeping"]},
 
-module.exports =personData;
+"fluffo" : { "name": "Fluffo",
+"dob": "01/02/2021",
+"movie": "none",
+"imageurl": "/images/fluffo.jpg",
+"height": "20cm",
+"hobbies": ["Sleeping", "Eating", "Lurking"]},
+
+"mckitty" : { "name": "McKitty",
+"dob": "01/02/2021",
+"movie": "none",
+"imageurl": "/images/kittynom.jpg",
+"height": "20cm",
+"hobbies": ["Staring At Fries", "Eating Fries", "Robbing fries"]},
+};
+
+module.exports = personData;
