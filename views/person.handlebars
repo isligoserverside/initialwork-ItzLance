@@ -2,6 +2,12 @@
 <div class="container-fluid mb-5 mt-5 bg-dark" id="containStyle">
    <div class="row no-gutters carousel-bg">
     <div class="col-md-5 mt-5 mb-5">
+      {{#if message}} 
+<h2>
+    {{message}}    
+</h2>
+{{/if}}
+
       <img src={{person.imageurl}} class="card-img carousel-img mt-2" alt="kid_with_tiger_plushy">
     </div>
     <div class="col-md-6">

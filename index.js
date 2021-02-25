@@ -1,5 +1,5 @@
 const express = require('express')
-const personData = require('./routes/personData');
+const cookieParser = require('cookie-parser');
 const app = express()
 const port = 3000
 
@@ -10,14 +10,17 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
 
-app.use('/personlist', require('./routes/personlist'));
+//app.use(cookieParser());
+const logger = (req,res,next)=>{
+    console.log('Logged');
+    next();
+}
+app.use(logger);
 
-app.use('/about', require('./routes/about'));
+app.use(cookieParser("spicy memes"));
 
-app.get('/', (req,res) => {
-    res.type('text/plain');
-    res.send('Covid Holiday Tour');
-});
+app.use('/staff', require('./routes/staff'));   //localhost:3000/staff/(name)
+app.use('/base', require('./routes/base'));
 
 app.use((req,res) => {
     res.type('text/plain');
