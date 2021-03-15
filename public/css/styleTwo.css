@@ -68,6 +68,25 @@ img:hover{
     transition-delay:0.1s;
     transform: scale(1.2);
 }
+input{
+    border-radius: 50px!important;
+}
+#formbtn{
+    border-radius: 50px!important; 
+    background-color: #666!important;
+    border: 0px!important;
+}
+#formbtn:hover{
+    background: linear-gradient(-45deg,#212121,#2e2e2e,#3d3d3d,#4f4e4e,#5e5e5e,#6e6e6e);
+    background-size: 400%;
+    animation-delay: 0s;
+    animation: change 3s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+select{
+    border-radius: 25px!important;
+    border: 0px;
+}
 footer{
 
  border-top-left-radius: 50px;

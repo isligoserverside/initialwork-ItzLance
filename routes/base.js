@@ -2,9 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-router.get('/', (req,res) => {
-    // res.type('text/plain');
-    // res.send('Covid Holiday Tour');
+router.get('/',  (req, res) => {
     var message = "";
     if (req.signedCookies.tracking){
         var dateLastVisit = req.signedCookies.tracking;

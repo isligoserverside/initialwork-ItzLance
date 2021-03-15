@@ -9,16 +9,17 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
-
 //app.use(cookieParser());
+app.use(cookieParser("una is great!!"));
 const logger = (req,res,next)=>{
     console.log('Logged');
     next();
 }
 app.use(logger);
+app.use(express.static('views/images'));
+//app.use(cookieParser("spicy memes"));
 
-app.use(cookieParser("spicy memes"));
-
+app.use(express.urlencoded({ extended: true }));
 app.use('/staff', require('./routes/staff'));   //localhost:3000/staff/(name)
 app.use('/base', require('./routes/base'));
 
