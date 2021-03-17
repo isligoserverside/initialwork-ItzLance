@@ -2,8 +2,9 @@
 <div class="container-fluid mb-5 mt-5 bg-dark" id="containStyle">
    <div class="row no-gutters carousel-bg">
     <div class="col-md-5 mt-5 mb-5">
+      <h3>Thank you {{name}} has been added to the database *</h3>
       {{#if message}} 
-<h2>
+<h2 id="sessionMessage">
     {{message}}    
 </h2>
 {{/if}}

@@ -18,7 +18,15 @@
     </div>
     <div class="col-md-12 col-lg-7">
       <div class="card-body mt-5" id="cardBdy">
-         {{{body}}}
+        {{#if flash}}
+                 <div class="alert alert-dismissible alert-{{flash.type}} " role="alert">
+          <button type="button" class="btn-close" 
+            data-bs-dismiss="alert" aria-hidden="true"></button>
+          <strong>{{flash.intro}}</strong> {{{flash.message}}}
+        </div>
+      {{/if}}
+      
+      {{{body}}}
       </div>
     </div>
   </div> 

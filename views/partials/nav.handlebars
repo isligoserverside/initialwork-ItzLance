@@ -1,17 +1,30 @@
 <div class="container-fluid">
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/personlist">Express Styling</a>
+  <a class="navbar-brand" href="/staff">Express Styling</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-       {{#each person}}
     <li class="list-group">
-        <a href="/personlist{{person.name}}" class="nav-link" role="button" aria-pressed="true">{{this.name}}</a>
+        <a href="/personlist{{person.name}}" class="nav-link" role="button" aria-pressed="true">Edna Mode</a>
+        <!--<a href="/{{this.name}}">{{this.name}}</a> -->
+    </li>  <li class="list-group">
+        <a href="/personlist{{person.name}}" class="nav-link" role="button" aria-pressed="true">Dipper</a>
         <!--<a href="/{{this.name}}">{{this.name}}</a> -->
     </li>
-   {{/each}}
+      <li class="list-group">
+        <a href="/personlist{{person.name}}" class="nav-link" role="button" aria-pressed="true">Fluffo</a>
+        <!--<a href="/{{this.name}}">{{this.name}}</a> -->
+    </li>
+      <li class="list-group">
+        <a href="/personlist{{person.name}}" class="nav-link" role="button" aria-pressed="true">Mckitty</a>
+        <!--<a href="/{{this.name}}">{{this.name}}</a> -->
+    </li>
+         <li class="list-group">
+        <a href="/staff/addnew" class="nav-link" role="button" aria-pressed="true">Add New</a>
+        <!--<a href="/{{this.name}}">{{this.name}}</a> -->
+    </li>
     </ul>
   </div>
 </nav>
