@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const personData = require('../lib/personData');
 
 
 router.get('/',  (req, res) => {
@@ -13,15 +14,18 @@ router.get('/',  (req, res) => {
     res.render('home', {'message': message});
 });
 
-router.get('/contact', (req,res) => {
-    res.type('text/plain');
-    res.send('Don\'t bother we never reply');
+router.get('/about', (req, res) => {
+    res.render('about', {
+        tags: "about, background", linkData:
+            [
+                { url: "http:itsligo.ie", text: '<strong> IT Sligo Web</strong>' },
+                { url: "http://www.irishtimes.ie", text: 'The Irish Times' }
+            ]
+    })
 });
 
-router.get('/about', (req,res) => {
-    res.type('text/plain');
-    res.send('About Our Holiday');
+router.get('/contact', (req, res) => {
+    res.render('contact', {data: personData});
 });
-router.get('/', (req,res) => res.render('about'));
 
 module.exports = router;

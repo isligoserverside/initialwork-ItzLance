@@ -1,7 +1,7 @@
 const express = require('express')
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const {flashMiddleware} = require('./lib/middleware.js');
+const {flashMiddleware, newsMiddleware} = require('./lib/middleware.js');
 const app = express()
 const port = 3000
 
@@ -26,6 +26,7 @@ const logger = (req,res,next)=>{
 }
 app.use(logger);
 app.use(flashMiddleware);
+app.use(newsMiddleware);
 app.use(express.urlencoded({ extended: true }));
 app.use('/staff', require('./routes/staff'));   //localhost:3000/staff/(name)
 app.use('/base', require('./routes/base'));
